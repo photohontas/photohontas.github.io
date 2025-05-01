@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,12 +6,6 @@ import { Separator } from "@/components/ui/separator";
 import { Instagram, Facebook, Camera } from "lucide-react";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real application, you would handle form submission here
-    console.log("Form submitted");
-  };
-
   return (
     <section id="contact" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4">
@@ -28,23 +21,23 @@ const Contact = () => {
           <div>
             <h3 className="text-2xl font-serif mb-6">Контактна інформація</h3>
             <p className="text-gray-700 mb-4">
-              Я доступний для фрілансу, співпраці та особливих подій.
+              Я доступна для фрілансу, співпраці та ваших особливих подій.
             </p>
             <div className="space-y-4 mb-8">
               <p className="flex items-center text-gray-700">
-                <span className="font-semibold w-24">Email:</span>
-                contact@lens.com
+                <span className="font-semibold w-24">Insagram:</span>
+                <a href="https://www.instagram.com/elizabet_golovlova/" className="text-blue-500 hover:text-blue-600">elizabet_golovlova</a>
               </p>
               <p className="flex items-center text-gray-700">
                 <span className="font-semibold w-24">Телефон:</span>
-                +1 (555) 123-4567
+                +380 (63) 975 28 74
               </p>
               <p className="flex items-center text-gray-700">
-                <span className="font-semibold w-24">Студія:</span>
-                123 Photo Street, City, Country
+                <span className="font-semibold w-24">Локація:</span>
+                Україна, Львів
               </p>
             </div>
-            
+
             <h3 className="text-2xl font-serif mb-4">Слідкуйте за мною</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-700 hover:text-black transition-colors">
@@ -60,30 +53,34 @@ const Contact = () => {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              className="space-y-6"
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Ім'я
                 </label>
-                <Input id="name" placeholder="Ваше ім'я" required />
+                <Input id="name" name="name" placeholder="Ваше ім'я" required />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                   Email
                 </label>
-                <Input id="email" type="email" placeholder="Ваш email" required />
+                <Input id="email" name="email" type="email" placeholder="Ваш email" required />
               </div>
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                   Тема
                 </label>
-                <Input id="subject" placeholder="Тема" required />
+                <Input id="subject" name="subject" placeholder="Тема" required />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   Повідомлення
                 </label>
-                <Textarea id="message" placeholder="Ваше повідомлення" rows={5} required />
+                <Textarea id="message" name="message" placeholder="Ваше повідомлення" rows={5} required />
               </div>
               <Button type="submit" className="w-full bg-black hover:bg-gray-800">
                 Надіслати повідомлення

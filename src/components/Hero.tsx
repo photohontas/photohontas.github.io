@@ -16,7 +16,7 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
-      
+
       <div className="container relative z-10 px-4 text-center text-white animate-fade-in">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6">
           Capture the Perfect Moment

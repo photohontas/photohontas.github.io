@@ -29,14 +29,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="text-xl font-serif font-semibold tracking-wide">
-          LENS
+          Elizabeth Photography
         </a>
         <div className="hidden md:flex space-x-8">
           <a href="#home" className="hover:text-gray-600 transition-colors">
             Головна
           </a>
           <a href="#about" className="hover:text-gray-600 transition-colors">
-            Про нас
+            Про мене
           </a>
           <a href="#portfolio" className="hover:text-gray-600 transition-colors">
             Портфоліо
